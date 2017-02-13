@@ -1,3 +1,8 @@
-<h1>
-  {{title}}
-</h1>
+<h1>A checkList</h1>
+
+
+<label *ngIf="size == 0"> There are no item yet.</label>
+
+<br>
+<input #txtname type="text">
+<button (click)="addName(txtname.value)">Add</button>
