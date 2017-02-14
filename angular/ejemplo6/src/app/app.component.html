@@ -11,4 +11,4 @@
 
 <br>
 <input #txtname type="text">
-<button (click)="addItem(txtname.value)">Add</button>
+<button (click)="addItem(txtname.value); txtname.value=''">Add</button>
