@@ -1,0 +1,5 @@
+<h1>Google books</h1>
+<input type="text" #txttitle>
+<button (click)="search(txttitle.value); txttitle.value=''">Buscar</button>
+<br>
+<p *ngFor="let book of books">{{book}}</p>
