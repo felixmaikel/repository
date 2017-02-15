@@ -1,0 +1,11 @@
+<h1>A checklist</h1>
+
+<label *ngIf="elements.length == 0">There are no item yet</label>
+
+<div *ngFor="let item of elements">
+  <element [item]="item" (remove)="removeItem($event)"></element>
+</div>
+
+<hr>
+<input type="text" #txtname>
+<button (click)="addItem(txtname.value); txtname.value=''">Add</button>
