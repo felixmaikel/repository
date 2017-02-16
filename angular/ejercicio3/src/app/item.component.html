@@ -1,0 +1,3 @@
+<input type="checkbox" [checked]="item.status" (click)="updateItem()">
+<span [class.checktext]="item.status">{{item.description}}{{item.status}}</span> 
+<button (click)="removeItem()">Delete</button>
