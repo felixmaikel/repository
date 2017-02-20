@@ -1,0 +1,6 @@
+<h1>Memory books</h1>
+<input type="text" #txttitle>
+<button (click)="getBooks(txttitle.value); txttitle.value = ''">Buscar</button>
+<div *ngFor="let book of books">
+  {{book}}
+</div>
