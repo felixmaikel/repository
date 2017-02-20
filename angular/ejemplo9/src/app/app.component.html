@@ -1,3 +1,4 @@
-<h1>
-  {{title}}
-</h1>
+<h1>Memory books</h1>
+<input type="text" #txt_title>
+<button (click)="getBooks(txt_title.value); txt_title.value=''">Buscar</button>
+<div *ngFor="let title of books">{{title}}</div>
