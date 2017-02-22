@@ -6,6 +6,7 @@ import { routing } from './app.routing';
 import { BooksListComponent } from './books-list.component';
 import { BookDetailComponent } from './book-details.component';
 import { BookService } from './book.service';
+import { BookFormComponent } from './book-form.component';
 
 import { AppComponent } from './app.component';
 
@@ -13,7 +14,8 @@ import { AppComponent } from './app.component';
   declarations: [
     AppComponent,
     BooksListComponent,
-    BookDetailComponent
+    BookDetailComponent,
+    BookFormComponent
   ],
   imports: [
     BrowserModule,

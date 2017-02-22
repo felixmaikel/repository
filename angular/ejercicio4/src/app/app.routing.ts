@@ -2,11 +2,13 @@
 import { Routes, RouterModule} from '@angular/router';
 import { BooksListComponent } from './books-list.component';
 import { BookDetailComponent } from './book-details.component';
+import { BookFormComponent } from './book-form.component';
 // Mapeo de url con componentes
 const appRoutes = [
-    {path : 'books', component : BooksListComponent},
-    {path : 'book/:id', component : BookDetailComponent},
-    {path : '', redirectTo : 'books', pathMatch : 'full'}
+    {path: 'books', component: BooksListComponent},
+    {path: 'books/new', component: BookFormComponent },
+    {path: 'books/:id', component: BookDetailComponent},
+    {path: '', redirectTo: 'books', pathMatch: 'full'}
 ]
 // Se insertan las url para ser exportadas por el RouterModule
 export const routing = RouterModule.forRoot(appRoutes);

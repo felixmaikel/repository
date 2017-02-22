@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Book } from './book.component';
 import { BookService } from './book.service';
+import { Router } from '@angular/router';
 
 @Component({
     selector : 'books-list',
@@ -12,9 +13,11 @@ export class BooksListComponent implements OnInit {
  
     books : Book[] = [];
     private bookService : BookService;
+    private router : Router;
 
-    constructor(bookService : BookService) {
+    constructor(bookService : BookService, router : Router) {
         this.bookService = bookService;
+        this.router = router;
     }
 
     ngOnInit(){
@@ -23,14 +26,11 @@ export class BooksListComponent implements OnInit {
 
     findAll(){
         this.bookService.findAll().subscribe(
-           response => this.convertToBooks(response) 
+           response => this.books = response 
         );
     }
 
-    private convertToBooks(response){
-        this.books = [];
-        for(var i=0; response.length; i++){
-            this.books.push({id: response[i].id, title: response[i].title, description: response[i].description});
-        }
+    gotoNewForm(){
+        this.router.navigate(['/books/new']);
     }
 }

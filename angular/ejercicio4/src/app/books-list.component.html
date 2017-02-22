@@ -1,6 +1,7 @@
 <h2>Books</h2>
 <ul>
     <li *ngFor="let book of books">
-        <a [routerLink]="['/book', book.id]"> {{book.id}} - {{book.title}} </a>
+        <a [routerLink]="['/books', book.id]"> {{book.id}} - {{book.title}} </a>
     </li>
 </ul>   
+<button (click)="gotoNewForm()">New book</button>

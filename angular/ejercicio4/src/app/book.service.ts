@@ -27,6 +27,10 @@ export class BookService {
         ).catch(error => this.showError(error));
     }
 
+    save(book : Book){
+        
+    }
+
     private showError(error : any){
         console.error(error);
         return Observable.throw("Sever error");

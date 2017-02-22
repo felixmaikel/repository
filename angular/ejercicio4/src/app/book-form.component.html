@@ -1,0 +1,16 @@
+<div *ngIf="book">
+    <h2 *ngIf="book.title">Book "{{book.title}}"</h2>
+    <label *ngIf="book.id">Id: {{book.id}} </label>
+    <div>
+        <label>Title</label>
+        <input type="text" [(ngModel)]="book.title"/>
+    </div>
+    <div>
+        <label>Description</label>
+        <textarea [(ngModel)]="book.description"></textarea>
+    </div>
+    <p>
+        <button (click)="newBook()">Save</button>
+        <button>Cancel</button> 
+    </p>
+</div>
