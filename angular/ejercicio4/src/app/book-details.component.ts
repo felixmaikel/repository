@@ -34,4 +34,15 @@ export class BookDetailComponent {
     gotoBooks(){
         this.router.navigate(['/books']);
     }
+
+    gotoEdit(){
+        this.router.navigate(['/books/edit', this.book.id]);
+    }
+
+    removeBook(){
+        this.bookService.remove(this.book.id).subscribe(
+            response => this.book = {title: ' ', description: ''}
+        );
+        this.router.navigate(['/books']);
+    }
 }

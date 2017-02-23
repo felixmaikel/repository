@@ -1,8 +1,8 @@
 <div *ngIf="book">
     <h2>Book "{{book.title}}"</h2>
     <p> {{book.description}}</p>
-    <button>Remove</button>
-    <button>Edit</button>
+    <button (click)="removeBook()">Remove</button>
+    <button (click)="gotoEdit()">Edit</button>
 </div>
 <br>
 <button (click)="gotoBooks()">Back</button>

@@ -28,7 +28,24 @@ export class BookService {
     }
 
     save(book : Book){
-        
+        return this.http.post(URl_BASE, {title: book.title, description: book.description}).map(
+            response => response.json(),
+            error => this.showError(error)
+        );
+    }
+
+    update(book : Book){
+        return this.http.put(URl_BASE+book.id, {id: book.id, title: book.title, description: book.description}).map(
+            response => response.json(),
+            error => this.showError(error)
+        );
+    }
+
+    remove(id : number){
+        return this.http.delete(URl_BASE+id).map(
+            response => response.json(),
+            error => this.showError(error)
+        );
     }
 
     private showError(error : any){
