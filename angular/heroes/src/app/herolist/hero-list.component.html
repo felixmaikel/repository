@@ -1,0 +1,17 @@
+<h2>My Heroes </h2>
+<div>
+    <label>Hero Name:</label>
+    <input type="text" #txtname >
+    <button (click)="newHero(txtname.value); txtname.value=''">Add</button>
+</div>
+<ul class="heroes">
+    <li *ngFor="let hero of heroes">
+        <span class="badge">{{hero.id}}</span>
+        <span (click)="selectHero(hero)">{{hero.name}}</span>
+        <button class="delete" (click)="remove(hero)">x</button>
+    </li>
+</ul>
+<div *ngIf="heroSelected">
+    <h2>{{heroSelected.name}} is my hero.</h2>
+    <button (click)="gotoViewDetails(heroSelected.id)">View Detail</button>
+</div>

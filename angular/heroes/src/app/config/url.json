@@ -1,0 +1,4 @@
+[
+    {"key":"MENU", "url":"app/config/menu.json"},
+    {"key":"HEROES", "url":"app/data/heroes.json"}
+]

@@ -1,0 +1,4 @@
+[
+    {"text":"Dashboard", "link":["/dashboard"]},
+    {"text":"Heroes", "link":["/heroes"]}
+]

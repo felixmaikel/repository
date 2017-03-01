@@ -1,0 +1,7 @@
+<h1>Tour of heroes</h1>
+<nav>
+  <template ngFor let-item [ngForOf]="items">
+    <a [routerLink]="item.link" routerLinkActive="active">{{item.text}}</a>
+  </template>
+</nav>
+<router-outlet></router-outlet>
