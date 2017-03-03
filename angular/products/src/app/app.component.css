@@ -1,0 +1,9 @@
+.banner {
+    background: white;
+    height: 100px;
+    border-bottom: 2px solid #607D8B
+}
+h1{
+    text-align: center;
+    color: #607D8B
+}

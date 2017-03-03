@@ -1,0 +1,14 @@
+<div class="main-box">
+    <div>
+        <button>Nuevo</button>
+        <button>Editar</button>
+        <button>Eliminar</button>
+    </div>
+    <label *ngIf="lists.length == 0">No hay listas disponobles.</label>
+    <ul *ngFor="let item of lists">
+        <div class="item-box">
+            <label>{{item.name}}</label>
+            <label>{{item.count}} {{item.createDate}}</label>
+        </div>
+    </ul>
+</div> 
