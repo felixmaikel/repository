@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ListModel } from '../models/list.model';
+import { ProductListService } from '../services/product-list.service';
+import { AppComponent } from '../app.component';
 
 @Component({
     selector: 'list-master',
@@ -10,18 +12,19 @@ import { ListModel } from '../models/list.model';
 export class ListMasterComponent implements OnInit {
 
     lists : ListModel[]=[];
+    model : ElementRef;
 
-    constructor(){
-
+    constructor(private productListService : ProductListService){
+        console.log(productListService);
     }
 
     ngOnInit(){
-        this.lists = [
-            {id: 1, name: 'lista 1', count: 12, createDate: '01/03/2017'},
-            {id: 2, name: 'lista 2', count: 12, createDate: '01/03/2017'},
-            {id: 3, name: 'lista 3', count: 12, createDate: '01/03/2017'},
-            {id: 4, name: 'lista 4', count: 12, createDate: '01/03/2017'},
-            {id: 5, name: 'lista 5', count: 12, createDate: '01/03/2017'}
-        ];
+        this.productListService.findAll().subscribe(
+            response => this.lists = response
+        );
+    }
+
+    newList(){
+        
     }
 }

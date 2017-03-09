@@ -12,11 +12,37 @@ button{
     padding: 0px
 }
 .item-box{
-    background: cadetblue;
+   /* background: thistle;*/
     margin: 0px;
-    padding: 0px
+    padding: 0px;
+    height: 70px
+}
+
+.item-box:hover{
+    background: wheat;
+    cursor: pointer
 }
 
 ul{
     padding: 0px;
+    margin: 0px;
+    border-bottom: 1px solid black;
+}
+
+.item-name{
+    font-size: 30px;
+    width: 100%;
+    display: block;
+    margin: 0px 10px;
+    margin-bottom: 10px;
+    color: #607D8B
+}
+
+.item-details{
+    font-size: 15px;
+    margin: 0px 10px;
+}
+
+span{
+    color: brown
 }

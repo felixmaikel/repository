@@ -1,14 +1,15 @@
 <div class="main-box">
     <div>
-        <button>Nuevo</button>
+        <button (click)="newList()">Nuevo</button>
+        <alert></alert>
         <button>Editar</button>
         <button>Eliminar</button>
     </div>
     <label *ngIf="lists.length == 0">No hay listas disponobles.</label>
     <ul *ngFor="let item of lists">
         <div class="item-box">
-            <label>{{item.name}}</label>
-            <label>{{item.count}} {{item.createDate}}</label>
+            <label class="item-name">{{item.name}}</label>
+            <label class="item-details">Total de art&iacute;culos: <span>{{item.count}}</span> Creada: <span>{{item.createDate}}</span> </label>
         </div>
     </ul>
 </div> 
