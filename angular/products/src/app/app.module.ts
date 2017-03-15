@@ -7,6 +7,8 @@ import { routing } from './app.routing';
 import { AppComponent } from './app.component';
 import { ListMasterComponent } from './master-details/list-master.component';
 import { ProductListService } from './services/product-list.service';
+import { MessageBoxComponent } from './dialogs/messagebox/message-box.component';
+import { MessageBoxDirective } from './dialogs/messagebox/message-box.directive';
 
 //Testing
 import { HttpServiceMock } from './services/mocks/HttpServiceMock';
@@ -14,7 +16,9 @@ import { HttpServiceMock } from './services/mocks/HttpServiceMock';
 @NgModule({
   declarations: [
     AppComponent,
-    ListMasterComponent
+    ListMasterComponent,
+    MessageBoxComponent,
+    MessageBoxDirective
   ],
   imports: [
     BrowserModule,
