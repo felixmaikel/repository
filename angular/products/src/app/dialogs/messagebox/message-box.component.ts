@@ -1,4 +1,5 @@
-import { Component, EventEmitter } from '@angular/core';
+import { Component } from '@angular/core';
+import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
     selector: 'message-box',
@@ -7,10 +8,22 @@ import { Component, EventEmitter } from '@angular/core';
 })
 
 export class MessageBoxComponent {
+
     message: string = 'Hola mundo!!!';
-    close = new EventEmitter();
+
+    constructor(private modalService : NgbModal){
+
+    }
+
+    open(content : any){
+        this.modalService.open(content).result.then(
+            result => {
+                console.log('${result}');
+            }
+        );
+    }
 
     closeBox(){
-        this.close.emit();
+        
     }
 }
