@@ -1,9 +1,8 @@
 <div class="main-box">
     <div>
-       <!--<button class="btn btn-info" data-toggle="modal" data-target="#newList">Nuevo</button>-->
-       <message-box></message-box>
-        <button>Editar</button>
-        <button>Eliminar</button>
+        <message-box btnText="Nuevo" title="Información" message="Alert modal"></message-box>
+        <message-box btnText="Editar" title="Información" message="Alert modal"></message-box>
+        <message-box btnText="Eliminar" title="Información" message="Alert modal"></message-box>
     </div>
     <label *ngIf="lists.length == 0">No hay listas disponobles.</label>
     <ul *ngFor="let item of lists">

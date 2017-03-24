@@ -1,5 +1,5 @@
-import { Component } from '@angular/core';
-import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
+import { Component, Input } from '@angular/core';
+import { NgbModal, NgbModalRef } from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
     selector: 'message-box',
@@ -8,8 +8,12 @@ import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 })
 
 export class MessageBoxComponent {
-
-    message: string = 'Hola mundo!!!';
+    @Input()
+    message: string;
+    @Input()
+    title : string;
+    @Input()
+    btnText : string;
 
     constructor(private modalService : NgbModal){
 
@@ -17,13 +21,10 @@ export class MessageBoxComponent {
 
     open(content : any){
         this.modalService.open(content).result.then(
-            result => {
-                console.log('${result}');
+            modalRef => {
+
             }
         );
     }
 
-    closeBox(){
-        
-    }
 }
