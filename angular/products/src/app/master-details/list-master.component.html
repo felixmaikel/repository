@@ -1,8 +1,8 @@
 <div class="main-box">
-    <div>
-        <message-box btnText="Nuevo" title="Información" message="Alert modal"></message-box>
+    <div class="btn-group btn-group-justified">
+        <new-list-model></new-list-model>
         <message-box btnText="Editar" title="Información" message="Alert modal"></message-box>
-        <message-box btnText="Eliminar" title="Información" message="Alert modal"></message-box>
+        <confirm-modal btnText="Eliminar" title="Eliminar" message="Desea eliminar este producto ?" (accept)="remove($event)"></confirm-modal>
     </div>
     <label *ngIf="lists.length == 0">No hay listas disponobles.</label>
     <ul *ngFor="let item of lists">

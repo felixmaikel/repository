@@ -3,6 +3,8 @@ import { ListModel } from '../models/list.model';
 import { ProductListService } from '../services/product-list.service';
 import { AppComponent } from '../app.component';
 import { MessageBoxComponent } from '../dialogs/messagebox/message-box.component';
+import { ConfirmModalComponent } from '../dialogs/confirmmodal/confirm-modal.component'; 
+import { ListModalComponent } from '../dialogs/productmodal/product-modal.component';
 
 @Component({
     selector: 'list-master',
@@ -26,5 +28,9 @@ export class ListMasterComponent implements OnInit {
 
     newList(){
        
+    }
+
+    remove(content : any){
+        console.log("Eliminando...");
     }
 }
