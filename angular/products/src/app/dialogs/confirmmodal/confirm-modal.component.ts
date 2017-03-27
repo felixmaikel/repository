@@ -1,5 +1,4 @@
 import { Component, Input, Output, EventEmitter} from '@angular/core';
-import { NgbModal, NgbModalRef } from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
     selector: 'confirm-modal',
@@ -15,18 +14,12 @@ export class ConfirmModalComponent {
     btnText : string;
     @Output()
     accept = new EventEmitter<any>();
-    modalRef : NgbModalRef;
 
-    constructor(private modalService : NgbModal){
+    constructor(){
 
-    }
-
-    open(content : any){
-        this.modalRef = this.modalService.open(content);
     }
 
     confirm(){
-        this.modalRef.close();
         this.accept.emit();
     }
 }

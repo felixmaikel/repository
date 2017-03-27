@@ -1,4 +1,4 @@
-import { Component, Output, EventEmitter } from '@angular/core';
+import { Component, Input, Output, EventEmitter } from '@angular/core';
 import { NgbModal, NgbModalRef } from '@ng-bootstrap/ng-bootstrap';
 import { ListModel } from '../../models/list.model';
 
@@ -8,6 +8,11 @@ import { ListModel } from '../../models/list.model';
 })
 
 export class ListModalComponent {
+    @Input()
+    title : string;
+    @Input()
+    btnText : string;
+    
     listModel : ListModel;
     @Output()
     accept = new EventEmitter<ListModel>();
@@ -17,12 +22,7 @@ export class ListModalComponent {
 
     }
 
-    open(content : any){
-        this.modalRef = this.modalService.open(content);
-    }
-
     confirm(){
-        this.modalRef.close();
         this.accept.emit(this.listModel);
     }
 }
