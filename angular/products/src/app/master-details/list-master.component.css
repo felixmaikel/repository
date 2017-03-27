@@ -23,11 +23,11 @@ button{
     cursor: pointer
 }
 
-ul{
+/*ul{
     padding: 0px;
     margin: 0px;
     border-bottom: 1px solid black;
-}
+}*/
 
 .item-name{
     font-size: 30px;

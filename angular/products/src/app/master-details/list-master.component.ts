@@ -8,8 +8,8 @@ import { ListModalComponent } from '../dialogs/productmodal/product-modal.compon
 
 @Component({
     selector: 'list-master',
-    templateUrl: './list-master.component.html',
-    styleUrls: ['./list-master.component.css']
+    templateUrl: './list-master.component.html'
+   // styleUrls: ['./list-master.component.css']
 })
 
 export class ListMasterComponent implements OnInit {

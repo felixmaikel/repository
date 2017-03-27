@@ -5,10 +5,29 @@
         <confirm-modal btnText="Eliminar" title="Eliminar" message="Desea eliminar este producto ?" (accept)="remove($event)"></confirm-modal>
     </div>
     <label *ngIf="lists.length == 0">No hay listas disponobles.</label>
-    <ul *ngFor="let item of lists">
-        <div class="item-box">
-            <label class="item-name">{{item.name}}</label>
-            <label class="item-details">Total de art&iacute;culos: <span>{{item.count}}</span> Creada: <span>{{item.createDate}}</span> </label>
-        </div>
+    <ul class="list-inline">
+        <li class="list-inline-item" *ngFor="let item of lists">
+            <div class="panel panel-primary">
+                <div class="panel-heading">
+                    <h5 class="panel-title">{{item.name}}</h5>
+                </div>
+                <div class="panel-body">
+                    <img class="img-responsive img-thumbnail" alt='item.name' [src]='item.image' width="100px" height="100px"/>
+                    <div>
+                        <label class="item-details">Total de art&iacute;culos: <span>{{item.count}}</span> </label> 
+                        <label> Creada: <span>{{item.createDate}}</span> </label>
+                    </div>
+                </div>
+            </div>
+        </li>
     </ul>
-</div> 
+</div>
+
+<div class="panel panel-primary">
+                <div class="panel-heading">
+                    <h5 class="panel-title">Pepe</h5>
+                </div>
+                <div class="panel-body">
+                    Pepe body
+                </div>
+            </div>
