@@ -27,7 +27,7 @@ export class ListMasterComponent implements OnInit {
     }
 
     newList(){
-       
+       console.log("Creado...");
     }
 
     remove(content : any){

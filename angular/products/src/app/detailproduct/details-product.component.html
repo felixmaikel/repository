@@ -1,0 +1,23 @@
+<div class="panel panel-primary">
+                <div class="panel-heading">
+                    <h5 class="panel-title">{{listModel.name}}</h5>
+                    <div class="dropdown">
+                        <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">
+                            <span class="caret"></span>
+                        </button>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a href="#detailModal" data-toggle="modal" id="editOption">Editar</a>
+                            </li>
+                            <li><a href="#">Eliminar</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="panel-body">
+                    <img class="img-responsive img-thumbnail" alt='item.name' [src]='listModel.image' width="100px" height="100px"/>
+                    <div>
+                        <label class="item-details">Total de art&iacute;culos: <span>{{listModel.count}}</span> </label> 
+                        <label> Creada: <span>{{listModel.createDate}}</span> </label>
+                    </div>
+                </div>
+</div>

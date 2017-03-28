@@ -11,6 +11,7 @@ import { ProductListService } from './services/product-list.service';
 import { MessageBoxComponent } from './dialogs/messagebox/message-box.component';
 import { ConfirmModalComponent } from './dialogs/confirmmodal/confirm-modal.component';
 import { ListModalComponent } from './dialogs/productmodal/product-modal.component';
+import { DetailProductComponent } from './detailproduct/details-product.component';
 
 //Testing
 import { HttpServiceMock } from './services/mocks/HttpServiceMock';
@@ -21,7 +22,8 @@ import { HttpServiceMock } from './services/mocks/HttpServiceMock';
     ListMasterComponent,
     MessageBoxComponent,
     ConfirmModalComponent,
-    ListModalComponent
+    ListModalComponent,
+    DetailProductComponent
   ],
   imports: [
     BrowserModule,

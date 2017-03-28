@@ -1,24 +1,13 @@
 <div class="main-box">
     <div class="btn-group btn-group-justified">
         <new-list-model btnText="Nuevo" title="Nuevo"></new-list-model>
-        <new-list-model btnText="Editar" title="Editar"></new-list-model>
-        <confirm-modal btnText="Eliminar" title="Eliminar" message="Desea eliminar este producto ?" (accept)="remove($event)"></confirm-modal>
     </div>
     <label *ngIf="lists.length == 0">No hay listas disponobles.</label>
     <ul class="list-inline">
         <li class="list-inline-item" *ngFor="let item of lists">
-            <div class="panel panel-primary">
-                <div class="panel-heading">
-                    <h5 class="panel-title">{{item.name}}</h5>
-                </div>
-                <div class="panel-body">
-                    <img class="img-responsive img-thumbnail" alt='item.name' [src]='item.image' width="100px" height="100px"/>
-                    <div>
-                        <label class="item-details">Total de art&iacute;culos: <span>{{item.count}}</span> </label> 
-                        <label> Creada: <span>{{item.createDate}}</span> </label>
-                    </div>
-                </div>
-            </div>
+            <product-details [listModel]="item"></product-details>
         </li>
     </ul>
 </div>
+<message-box title="Informacion" message="Alert" btnText="aa"></message-box>
+<new-list-model [listModel]="listModel"></new-list-model>
