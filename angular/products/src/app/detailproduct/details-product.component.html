@@ -7,17 +7,18 @@
                         </button>
                         <ul class="dropdown-menu">
                             <li>
-                                <a href="#detailModal" data-toggle="modal" id="editOption">Editar</a>
+                                <a data-toggle="modal" (click)="openModal()">Editar</a>
                             </li>
                             <li><a href="#">Eliminar</a></li>
                         </ul>
                     </div>
                 </div>
                 <div class="panel-body">
-                    <img class="img-responsive img-thumbnail" alt='item.name' [src]='listModel.image' width="100px" height="100px"/>
+                    <img class="img-responsive img-thumbnail" [alt]='listModel.name' [src]='listModel.image' width="100px" height="100px"/>
                     <div>
                         <label class="item-details">Total de art&iacute;culos: <span>{{listModel.count}}</span> </label> 
                         <label> Creada: <span>{{listModel.createDate}}</span> </label>
                     </div>
                 </div>
 </div>
+<!--<new-list-model title="Editar"></new-list-model>-->

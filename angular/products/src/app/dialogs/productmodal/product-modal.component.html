@@ -8,11 +8,11 @@
       <div class="modal-body">
         <div>
             <label>Nombre</label>
-            <input type="text" class="form-control" #txtname [(ngModel)]="modelList.name">
+            <input type="text" class="form-control" #txtname value="{{listModel.name}}">
         </div>
         <div>
             <label>Cantidad</label>
-            <input type="number" class="form-control" #txtcount [(ngModel)]="modelList.count">
+            <input type="number" class="form-control" #txtcount value="{{listModel.count}}">
         </div>
       </div>
       <div class="modal-footer">

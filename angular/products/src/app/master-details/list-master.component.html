@@ -1,7 +1,4 @@
 <div class="main-box">
-    <div class="btn-group btn-group-justified">
-        <new-list-model btnText="Nuevo" title="Nuevo"></new-list-model>
-    </div>
     <label *ngIf="lists.length == 0">No hay listas disponobles.</label>
     <ul class="list-inline">
         <li class="list-inline-item" *ngFor="let item of lists">
@@ -10,4 +7,3 @@
     </ul>
 </div>
 <message-box title="Informacion" message="Alert" btnText="aa"></message-box>
-<new-list-model [listModel]="listModel"></new-list-model>

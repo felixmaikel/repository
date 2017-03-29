@@ -12,6 +12,7 @@ import { MessageBoxComponent } from './dialogs/messagebox/message-box.component'
 import { ConfirmModalComponent } from './dialogs/confirmmodal/confirm-modal.component';
 import { ListModalComponent } from './dialogs/productmodal/product-modal.component';
 import { DetailProductComponent } from './detailproduct/details-product.component';
+import { NavBarComponent } from './nav-bar/nav-bar.component';
 
 //Testing
 import { HttpServiceMock } from './services/mocks/HttpServiceMock';
@@ -23,7 +24,8 @@ import { HttpServiceMock } from './services/mocks/HttpServiceMock';
     MessageBoxComponent,
     ConfirmModalComponent,
     ListModalComponent,
-    DetailProductComponent
+    DetailProductComponent,
+    NavBarComponent
   ],
   imports: [
     BrowserModule,

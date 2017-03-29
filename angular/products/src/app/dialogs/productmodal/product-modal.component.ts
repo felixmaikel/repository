@@ -1,4 +1,4 @@
-import { Component, Input, Output, EventEmitter, OnInit } from '@angular/core';
+import { Component, Input, Output, EventEmitter, ViewChild } from '@angular/core';
 import { NgbModal, NgbModalRef } from '@ng-bootstrap/ng-bootstrap';
 import { ListModel } from '../../models/list.model';
 
@@ -7,22 +7,29 @@ import { ListModel } from '../../models/list.model';
     templateUrl: './product-modal.component.html'
 })
 
-export class ListModalComponent implements OnInit {
-    title : string;
+export class ListModalComponent {
     @Input()
+    title : string;
+
     listModel : ListModel;
+
+    @ViewChild('detailModal')
+    modal;
+
     @Output()
     accept = new EventEmitter<ListModel>();
 
-    ngOnInit(){
-        this.title = "Editar"
-        if(!this.listModel){
-            this.title = "Nuevo"
-            this.listModel = {name:'', image:'',count:0};
-        }
+    constructor(private modalService : NgbModal){
+
     }
-    
+
+    open(title : string, listModel : ListModel){
+        this.modal.title = title;
+        this.modal.listModel = listModel;
+        this.modalService.open(this.modal);
+    }
+
     confirm(){
-        this.accept.emit(this.listModel);
+        console.log(this);
     }
 }
