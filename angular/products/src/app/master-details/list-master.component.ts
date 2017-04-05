@@ -17,7 +17,7 @@ export class ListMasterComponent implements OnInit {
     lists : ListModel[]=[];
 
     constructor(private productListService : ProductListService){
-        console.log(productListService);
+        
     }
 
     ngOnInit(){

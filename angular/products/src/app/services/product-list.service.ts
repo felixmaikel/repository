@@ -28,6 +28,14 @@ export class ProductListService{
         );
     }
 
+    update(item : ListModel){
+        return this.http.put(URL_BASE, item).map(
+            response => response.json()
+        ).catch(
+            error => this.showError(error)
+        );
+    }
+
     showError(error){
         return Observable.throw(error);
     }

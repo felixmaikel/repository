@@ -1,14 +1,13 @@
 <div class="panel panel-primary">
                 <div class="panel-heading">
-                    <h5 class="panel-title">{{listModel.name}}</h5>
+                    <h5 class="panel-title pull-left">{{listModel.name}}</h5>
                     <div class="dropdown">
                         <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">
                             <span class="caret"></span>
                         </button>
                         <ul class="dropdown-menu">
-                            <li>
-                                <a data-toggle="modal" (click)="openModal()">Editar</a>
-                            </li>
+                            <li><a data-toggle="modal" href="#{{listModel.id}}">Editar</a></li>
+                            <li class="divider"></li>
                             <li><a href="#">Eliminar</a></li>
                         </ul>
                     </div>
@@ -21,4 +20,4 @@
                     </div>
                 </div>
 </div>
-<!--<new-list-model title="Editar"></new-list-model>-->
+<new-list-model title="Editar" [item]="listModel" (modify)="update($event)"></new-list-model>

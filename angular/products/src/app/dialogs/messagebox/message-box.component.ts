@@ -8,23 +8,11 @@ import { NgbModal, NgbModalRef } from '@ng-bootstrap/ng-bootstrap';
 })
 
 export class MessageBoxComponent {
-    @Input()
+    /*@Input()
     message: string;
     @Input()
     title : string;
     @Input()
-    btnText : string;
-
-    constructor(private modalService : NgbModal){
-
-    }
-
-    open(content : any){
-        this.modalService.open(content).result.then(
-            modalRef => {
-
-            }
-        );
-    }
+    btnText : string;*/
 
 }

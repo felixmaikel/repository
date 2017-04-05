@@ -1,4 +1,4 @@
-<div id="detailModal" class="modal fade" role="dialog" *ngIf="listModel">
+<div id="{{listModel.id}}" class="modal fade" role="dialog" *ngIf="listModel">
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
@@ -16,7 +16,7 @@
         </div>
       </div>
       <div class="modal-footer">
-        <button class="btn btn-success" data-dismiss="modal" (click)="confirm()">Aceptar</button>
+        <button class="btn btn-success" data-dismiss="modal" (click)="confirm(txtname.value, txtcount.value)">Aceptar</button>
         <button class="btn btn-danger" data-dismiss="modal">Cerrar</button>
       </div>
     </div>

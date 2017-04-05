@@ -19,8 +19,6 @@ export class  HttpServiceMock extends MockBackend{
     }
 
     get(url: string, options?: RequestOptionsArgs): Observable<Response>{
-        console.log(url);
-        console.log(options)
         return Observable.of(new Response(new ResponseOptions({
             body: JSON.stringify(this.listModels)
         })));
@@ -30,6 +28,20 @@ export class  HttpServiceMock extends MockBackend{
         this.listModels.push({id:this.countId, name: body.name, image: body.image, count:body.count, createDate: new Date()});
         return Observable.of(new Response(new ResponseOptions({
             body: JSON.stringify(this.listModels)
+        })));
+    }
+
+    put(url: string, body: any, options?: RequestOptionsArgs): Observable<Response>{
+        let index = 0;
+        for(var i=0; i<this.listModels.length; i++){
+            if(this.listModels[i].id == body.id){
+                this.listModels[i].name = body.name;
+                this.listModels[i].count = body.count;
+                index = i;
+            }
+        }
+        return Observable.of(new Response(new ResponseOptions({
+            body: JSON.stringify(this.listModels[index])
         })));
     }
 }

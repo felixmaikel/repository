@@ -3,7 +3,7 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule, Http } from '@angular/http';
 import { routing } from './app.routing';
-import { NgbModalModule } from '@ng-bootstrap/ng-bootstrap';
+import { NgbModule, NgbModalModule, NgbModal } from '@ng-bootstrap/ng-bootstrap';
 
 import { AppComponent } from './app.component';
 import { ListMasterComponent } from './master-details/list-master.component';
@@ -32,9 +32,11 @@ import { HttpServiceMock } from './services/mocks/HttpServiceMock';
     FormsModule,
     HttpModule,
     routing,
+    NgbModule.forRoot(),
     NgbModalModule.forRoot()
   ],
-  providers: [ProductListService,{provide: Http, useClass: HttpServiceMock}],
+  providers: [ProductListService, NgbModal,{provide: Http, useClass: HttpServiceMock}],
+  entryComponents: [DetailProductComponent, MessageBoxComponent],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
