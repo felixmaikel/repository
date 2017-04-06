@@ -1,8 +1,12 @@
 <div class="main-box">
+    <div class="alert alert-success alert-dismissable" *ngIf="sussess">
+        <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+        Se ha eliminado el producto correctamente.
+    </div>
     <label *ngIf="lists.length == 0">No hay listas disponobles.</label>
     <ul class="list-inline">
         <li class="list-inline-item" *ngFor="let item of lists">
-            <product-details [listModel]="item"></product-details>
+            <product-details [listModel]="item" (refresh)="refresh()"></product-details>
         </li>
     </ul>
 </div>

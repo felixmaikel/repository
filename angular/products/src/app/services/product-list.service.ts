@@ -36,6 +36,14 @@ export class ProductListService{
         );
     }
 
+    remove(id : number) {
+        return this.http.delete(URL_BASE+"/"+id).map(
+            response => response.json()
+        ).catch(
+            error => this.showError(error)
+        );
+    }
+
     showError(error){
         return Observable.throw(error);
     }

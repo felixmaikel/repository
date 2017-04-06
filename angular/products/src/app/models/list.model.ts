@@ -4,4 +4,5 @@ export interface ListModel{
     image: string;
     count: number;
     createDate?: Date;
+    comment?:number;
 }

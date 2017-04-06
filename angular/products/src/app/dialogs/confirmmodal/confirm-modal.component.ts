@@ -11,7 +11,7 @@ export class ConfirmModalComponent {
     @Input()
     message : string;
     @Input()
-    btnText : string;
+    alias : string
     @Output()
     accept = new EventEmitter<any>();
 

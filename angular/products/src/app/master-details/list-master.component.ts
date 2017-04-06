@@ -15,12 +15,14 @@ import { ListModalComponent } from '../dialogs/productmodal/product-modal.compon
 export class ListMasterComponent implements OnInit {
 
     lists : ListModel[]=[];
+    sussess : boolean;
 
     constructor(private productListService : ProductListService){
         
     }
 
     ngOnInit(){
+        this.sussess = false;
         this.productListService.findAll().subscribe(
             response => this.lists = response
         );
@@ -30,7 +32,11 @@ export class ListMasterComponent implements OnInit {
        console.log("Creado...");
     }
 
-    remove(content : any){
-        console.log("Eliminando...");
+    refresh(){
+        this.sussess = true;
+        this.productListService.findAll().subscribe(
+            response => this.lists = response
+        );
     }
+
 }
