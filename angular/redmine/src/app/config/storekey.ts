@@ -1,0 +1,2 @@
+export const PERSON_ID_KEY = "PERSON_ID_KEY";
+export const VALIDATED_LOGIN = "VALIDATED_LOGIN";
