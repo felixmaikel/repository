@@ -1,0 +1,105 @@
+*{
+	box-sizing: border-box;
+}
+
+.row {
+	width: 100%;
+	position: relative;
+	overflow: hidden;
+}
+
+.col-1, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-10, .col-11, .col-12{
+	padding: 5px;
+}
+
+@media (min-width: 992px) {
+	.col-1 {
+		float: left;
+		width: 8.333%;
+	}
+
+	.col-2 {
+		float: left;
+		width: 16.666%;
+	}
+
+	.col-3 {
+		float: left;
+		width: 25%;
+	}
+
+	.col-4 {
+		float: left;
+		width: 33.333%;
+	}
+
+	.col-5 {
+		float: left;
+		width: 41.666%;
+	}
+
+	.col-6 {
+		float: left;
+		width: 50%;
+	}
+
+	.col-7 {
+		float: left;
+		width: 58.333%;
+	}
+
+	.col-8 {
+		float: left;
+		width: 66.666%;
+	}
+
+	.col-9 {
+		float: left;
+		width: 75%;
+	}
+
+	.col-10 {
+		float: left;
+		width: 83.333%;
+	}
+
+	.col-11 {
+		float: left;
+		width: 91.666%;
+	}
+
+	.col-12 {
+		float: left;
+		width: 100%;
+	}
+
+}
+
+@media (min-width: 786px) and (max-width: 992px) {
+	.md-1 {
+		float: left;
+		width: 33.333%;
+	}
+
+	.md-2 {
+		float: left;
+		width: 66.666%;
+	}
+
+	.md-3 {
+		float: left;
+		width: 100%;
+	}
+}
+
+@media (max-width: 786px) {
+	.ms-1 {
+		float: left;
+		width: 50%;
+	}
+
+	.ms-2 {
+		float: left;
+		width: 100%;
+	}
+}
