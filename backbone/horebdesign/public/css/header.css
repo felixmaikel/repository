@@ -1,0 +1,14 @@
+header {
+	background-color: #F8F8F8;
+	width: 20%;
+	float: left;
+	padding: 24px 0 0 20px;
+	height: 100px;
+	box-sizing: border-box;
+}
+
+nav {
+	background-color: #F8F8F8;
+	float: right;
+	height: 100px;
+}
