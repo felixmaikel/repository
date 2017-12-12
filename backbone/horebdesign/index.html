@@ -9,9 +9,16 @@
 	</head>
 	<body>
 		<div id="container">
-			<header id="header">
-				<img src="public/img/logo.png">
-			</header>
+			<div id="main-menu">
+				<header id="header">
+					<img src="public/img/logo.png">
+				</header>
+				<nav id="nav-menu">
+					<ul id="menu">
+						
+					</ul>
+				</nav>
+			</div>
 			<div id="content">
 				
 			</div>
@@ -24,7 +31,12 @@
 		<script type="text/javascript" src="public/js/vendor/underscore-min.js"></script>
 		<script type="text/javascript" src="public/js/vendor/backbone-min.js"></script>
 
-		<script type="text/javascript" src="public/js/backbone/models/header.js"></script>
+		<script type="text/javascript" src="public/js/backbone/models/MenuItem.js"></script>
+		<script type="text/javascript" src="public/js/backbone/collections/MenuCollection.js"></script>
+		<script type="text/javascript" src="public/js/backbone/view/MenuItemView.js"></script>
+		<script type="text/javascript" src="public/js/backbone/view/menubarcomponent.js"></script>
+		<script type="text/javascript" src="public/js/backbone/view/ContainerView.js"></script>
+		<script type="text/javascript" src="public/app.js"></script>
 
 	</body>
 </html>
