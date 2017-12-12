@@ -1,19 +1,12 @@
 require([
 	'backbone',
-	'_',
-	'text!template/menubarcomponent.html'
-], function(Backbone, _, template){
+	'underscore'
+],function(Backbone, _){
 	return Backbone.View.extend({
-	
-	template:_.template(template),
+		el: 'li',
 
-	initialize: function(menuItem) {
-		this.model = menuItem;
-	},
-
-	render: function() {
-		this.$el.html(this.template);
-		return this;
-	}
-});	
+		render: function(){
+			return this;
+		}
+	});
 });
