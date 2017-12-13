@@ -1,8 +1,8 @@
 require([
 	'backbone',
 	'underscore',
-	'./MenuItemView',
-	'../collections/MenuCollection'
+	'application/view/MenuItemView',
+	'application/collections/MenuCollection'
 ], function(Backbone, _, MenuItemView, MenuCollection) {
 	return Backbone.View.extend({
 

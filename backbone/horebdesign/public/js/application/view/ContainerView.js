@@ -1,6 +1,6 @@
 define([
 	'backbone',
-	'./MenuBarComponent'
+	'application/view/MenuBarComponent'
 ], function(Backbone, MenuBarComponent){
 	return Backbone.View.extend({
 	el: '#container',
