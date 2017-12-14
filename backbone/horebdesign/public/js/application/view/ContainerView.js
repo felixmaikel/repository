@@ -1,16 +1,19 @@
 define([
 	'backbone',
-	'application/view/MenuBarComponent'
-], function(Backbone, MenuBarComponent){
+	'application/view/HeaderView'
+], function(Backbone, HeaderView1){
+	'use strict';
 	return Backbone.View.extend({
 	el: '#container',
 
+	header: HeaderView1,
+
 	initialize: function() {
-		this.menuBarComponent = new MenuBarComponent();
+			
 	},
 
 	render: function() {
-		this.$el.find('#main-menu').append(this.menuBarComponent.render().el);
+		var a = this.header;
 		return this;
 	}
 });
