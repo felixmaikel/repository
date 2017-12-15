@@ -1,8 +1,7 @@
-require([
+define([
 		'backbone'
 	], function(Backbone) {
-
-		var headerView = Backbone.View.extend({
+		return Backbone.View.extend({
 			el: '#header-template',
 
 			initialize: function() {
@@ -10,8 +9,8 @@ require([
 			},
 
 			render: function() {
+				this.$el.text("Prueba");
 				return this;
 			}
 		});
-		return headerView;
 });

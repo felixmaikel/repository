@@ -1,19 +1,16 @@
 define([
 	'backbone',
 	'application/view/HeaderView'
-], function(Backbone, HeaderView1){
-	'use strict';
+], function(Backbone, HeaderView){
 	return Backbone.View.extend({
 	el: '#container',
 
-	header: HeaderView1,
-
 	initialize: function() {
-			
+		this.header = new HeaderView();
 	},
 
 	render: function() {
-		var a = this.header;
+		this.$el.html(this.header.render().el);
 		return this;
 	}
 });
